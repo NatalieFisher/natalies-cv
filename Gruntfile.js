@@ -43,15 +43,6 @@ module.exports = function( grunt ) {
             }
         },
 
-        // Compile SVGs
-        svgstore: {
-            default : {
-                files: {
-                    'build/img/svgcompile.svg': ['build/img/svgs/*.svg'],
-                },
-            },
-        },
-
         // Sync images to dist
         sync: {
             main: {
@@ -72,12 +63,6 @@ module.exports = function( grunt ) {
                     'build/sass/**/**.{scss,sass}'
                 ],
                 tasks:['compass']
-            },
-            svgstore: {
-                files: [
-                    'build/img/svgs/*.svg'
-                ],
-                tasks:['svgstore']
             },
             sync: {
                 files: [
@@ -125,9 +110,8 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-svgstore');
     grunt.loadNpmTasks('grunt-sync');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['sync','compass','svgstore','bake:build','uglify','browserSync','watch']);
+    grunt.registerTask('default', ['sync','compass','bake:build','uglify','browserSync','watch']);
 };
