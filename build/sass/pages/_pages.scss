@@ -1,3 +1,41 @@
 /*------------------------------------*\
     #Pages will go in this folder
 \*------------------------------------*/
+
+body {
+    font-family: 'Questrial', sans-serif;
+}
+
+header {
+    padding: 50px 0;
+    text-align: center;
+    img {
+        border-radius: 100%;
+        margin: 0 auto;
+        width: 200px;
+        height: auto;
+    }
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+
+    .main {
+        display: block;
+        border: 3px solid black;
+        font-size: 80px;
+        padding: 10px 15px;
+    }
+    .sub {
+        display: inline-block;
+        font-size: 30px;
+        letter-spacing: 4px;
+        margin: 10px 0 20px 0;
+    }
+}
+
+img {
+    display: block;
+}
