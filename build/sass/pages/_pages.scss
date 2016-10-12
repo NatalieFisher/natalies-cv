@@ -1,14 +1,24 @@
 /*------------------------------------*\
     #Pages will go in this folder
 \*------------------------------------*/
-
+$brand:#e2cce8;
 body {
     font-family: 'Questrial', sans-serif;
+}
+
+img {
+    display: block;
+}
+
+p {
+    line-height: 1.5em;
+
 }
 
 header {
     padding: 50px 0;
     text-align: center;
+
     img {
         border-radius: 100%;
         margin: 0 auto;
@@ -22,11 +32,17 @@ h1 {
     text-align: center;
     display: inline-block;
 
+
     .main {
         display: block;
         border: 3px solid black;
-        font-size: 80px;
+        font-size: 40px;
         padding: 10px 15px;
+        background-color: $brand;
+
+        @media (min-width: 666px) {
+            font-size: 80px;
+        }
     }
     .sub {
         display: inline-block;
@@ -36,6 +52,86 @@ h1 {
     }
 }
 
-img {
-    display: block;
+.profile {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 40px 0;
+    margin-bottom: 40px;
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin: 8px;
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+h3 {
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid black;
+    border-bottom: 1px solid black;
+    padding: 8px;
+    margin: 40px 0 15px 0;
+
+    &:first-child {
+        margin: 20px 0 15px 0;
+    }
+}
+
+.content {
+    padding: 20px;
+    margin-bottom: 40px;
+    h4 {
+        font-size: 17px;
+        font-weight: bold;
+        margin: 20px 0 10px 0;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    p {
+        line-height: 1.5em;
+    }
+    ul {
+        list-style: disc;
+        margin-left: 15px;
+        h4 {
+            text-align: left;
+        }
+    }
+    li {
+        margin-top: 20px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    h5 {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+}
+
+.education {
+    margin-bottom: 20px;
+}
+
+.year {
+    text-decoration: underline;
+}
+
+.skills {
+    li {
+        margin: 20px 0 0 0;
+
+        &:first-child {
+            margin: 0;
+        }
+    }
 }
